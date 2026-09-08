@@ -1,12 +1,12 @@
 ﻿warp.tile\_empty
 ================
 
-.. function:: warp._src.lang.tile_empty(shape: tuple[int, ...], dtype: Any, storage: str) -> Tile[Any, tuple[int, ...]]
+.. function:: warp._src.lang.tile_empty(shape: tuple[int, ...], dtype: Any = float, storage: str = "register") -> Tile[Any, tuple[int, ...]]
 
-   .. hlist::
-      :columns: 8
-
-      * Kernel
+   .. wp-builtin-tags::
+      :kernel: true
+      :python: false
+      :differentiable: false
 
    Allocate a tile of uninitialized items.
    
@@ -23,19 +23,19 @@
    element-wise fill).
    
    :param shape: Shape of the output tile
-   :param dtype: Data type of output tile's elements (default float)
-   :param storage: The storage location for the tile: ``"register"`` for registers
-                   (default) or ``"shared"`` for shared memory.
+   :param dtype: Data type of output tile's elements
+   :param storage: The storage location for the tile: ``"register"`` for registers or
+                   ``"shared"`` for shared memory.
    
    :returns: An uninitialized tile with the requested shape and data type.
    
 
-.. function:: warp._src.lang.tile_empty(shape: int32, dtype: Any, storage: str) -> Tile[Any, tuple[int, ...]]
+.. function:: warp._src.lang.tile_empty(shape: int32, dtype: Any = float, storage: str = "register") -> Tile[Any, tuple[int, ...]]
    :noindex:
 
-   .. hlist::
-      :columns: 8
-
-      * Kernel
+   .. wp-builtin-tags::
+      :kernel: true
+      :python: false
+      :differentiable: false
 
    Allocate a tile of uninitialized items.
